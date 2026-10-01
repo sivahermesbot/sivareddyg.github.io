@@ -210,6 +210,40 @@
 .alumni-dest {
     color: #444;
 }
+@media (max-width: 600px) {
+    .alumni-list, .alumni-row {
+        display: block;
+        width: 100%;
+    }
+    .alumni-header {
+        display: none;
+    }
+    .alumni-row {
+        padding: 9px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .alumni-name, .alumni-role, .alumni-dates, .alumni-dest {
+        display: block;
+        padding: 1px 0;
+        border: 0;
+        white-space: normal;
+    }
+    .alumni-role::before {
+        content: "Role: ";
+        font-weight: 600;
+        color: #666;
+    }
+    .alumni-dates::before {
+        content: "Period: ";
+        font-weight: 600;
+        color: #666;
+    }
+    .alumni-dest:not(:empty)::before {
+        content: "Next: ";
+        font-weight: 600;
+        color: #666;
+    }
+}
 </style>
 <div class="hero">
 <img src="siva2.jpg" class="hero-photo" />
